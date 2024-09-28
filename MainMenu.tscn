@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://dbp4undpx47lu"]
+
+[ext_resource type="Script" path="res://MainMenu.gd" id="1_hw1li"]
+[ext_resource type="Texture2D" uid="uid://b880ghi6p2l7n" path="res://assets/Start_jasny.png" id="2_n5ylk"]
+[ext_resource type="Texture2D" uid="uid://bjjglpjfdqdko" path="res://assets/Start_Ciemny.png" id="3_ve1rk"]
+[ext_resource type="Texture2D" uid="uid://c3n7sev0tijro" path="res://assets/Quit_jasny.png" id="4_ss8rx"]
+[ext_resource type="Texture2D" uid="uid://cd5v1dctjof81" path="res://assets/Quit_Ciemny.png" id="5_pqsav"]
+
+[node name="MainMenu" type="MarginContainer"]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 0
+script = ExtResource("1_hw1li")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="NewGame" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture_normal = ExtResource("2_n5ylk")
+texture_pressed = ExtResource("3_ve1rk")
+stretch_mode = 0
+
+[node name="quit" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture_normal = ExtResource("4_ss8rx")
+texture_pressed = ExtResource("5_pqsav")
+stretch_mode = 0
+
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/NewGame" to="." method="_on_new_game_button_up"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/quit" to="." method="_on_quit_button_up"]
