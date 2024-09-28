@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 var basket = 300
-var speed = 800
+var speed = 1200
 var vecy = 0
 var vecx = 0
 var M_menu = false

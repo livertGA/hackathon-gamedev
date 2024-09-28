@@ -32,8 +32,10 @@ func spawn():
 		get_parent().add_child(thing)
 		$Timer.start()
 		get_parent().get_parent().get_node("CanvasLayer/Control").hide()
+		get_parent().get_parent().get_node("CanvasLayer/Control/Control").show()
 	else:
 		get_parent().get_parent().get_node("CanvasLayer/Control").show()
+		get_parent().get_parent().get_node("CanvasLayer/Control/Control").show()
 func _on_timer_timeout():
 	spawn()
 	spawn()

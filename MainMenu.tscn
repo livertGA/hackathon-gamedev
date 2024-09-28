@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dbp4undpx47lu"]
+[gd_scene load_steps=7 format=3 uid="uid://dbp4undpx47lu"]
 
 [ext_resource type="Script" path="res://MainMenu.gd" id="1_hw1li"]
+[ext_resource type="Texture2D" uid="uid://ydsjai47ym3o" path="res://assets/tłó.png" id="2_38npx"]
 [ext_resource type="Texture2D" uid="uid://b880ghi6p2l7n" path="res://assets/Start_jasny.png" id="2_n5ylk"]
 [ext_resource type="Texture2D" uid="uid://bjjglpjfdqdko" path="res://assets/Start_Ciemny.png" id="3_ve1rk"]
 [ext_resource type="Texture2D" uid="uid://c3n7sev0tijro" path="res://assets/Quit_jasny.png" id="4_ss8rx"]
@@ -16,6 +17,11 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_filter = 0
 script = ExtResource("1_hw1li")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.435192, 0.435192, 0.435192, 1)
+layout_mode = 2
+texture = ExtResource("2_38npx")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
