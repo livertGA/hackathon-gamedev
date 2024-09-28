@@ -31,7 +31,9 @@ func spawn():
 			thing.position.y = position.y + randi_range(-60,-300)
 		get_parent().add_child(thing)
 		$Timer.start()
-
+		get_parent().get_parent().get_node("CanvasLayer/Control").hide()
+	else:
+		get_parent().get_parent().get_node("CanvasLayer/Control").show()
 func _on_timer_timeout():
 	spawn()
 	spawn()
